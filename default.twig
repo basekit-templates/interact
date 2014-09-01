@@ -1,0 +1,58 @@
+
+{% extends "layout.twig" %}
+
+{% block content %}
+<div class="bk-pt-default">
+  <div class="widgetheader clearfix">
+      <div class="wrapper">
+          <div class="left-header">
+              {{widget('profile', 'headercolumn1profilePhone', { 'profileType':'phone', 'phone':'profile'})|raw}} 
+          </div>
+          <div class="right-header">
+              {{widget('content', 'textwidgetbox1', {content: '<p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut"</p>', lines: 'all'})|raw}}
+          </div>
+      </div>
+  </div>
+
+<header class="bk-header clearfix">
+    <div class="wrapper">
+        <div class="logo">
+            {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+            {{widget('companyname', 'companyname', {"business": "DESKTOP"})|raw}}
+        </div>
+    </div>
+</header> 
+
+<div class="navbar clearfix">
+        {{widget('extendednavigation', 'navigationheader', {"align":"center"})|raw}}
+</div>
+
+<div class="page-wrap">
+  <div class="wrapper">
+    <div class="mainzone headerwrapper">
+      {{zone('main')|raw}}
+    </div>
+  </div>
+</div>
+
+<footer class="bk-footer">
+        <div class="wrapper clearfix">
+            <div class="responsivecolumns columns-two-50-50">
+                <div class="column columns-two-left">
+                  <div class="left-footer">
+                    {{widget('content', 'textwidgetbox2', {content: '<h4>Lorem ipsum</h4>', lines: 'all'})|raw}}
+                    {{widget('content', 'textwidgetbox3', {content: '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut</p>', lines: 'all'})|raw}}
+                    </div>
+                </div>
+                <div class="column columns-two-right">
+                <div class="right-footer">
+                    {{widget('profile', 'footercolumn1profilesocialicons', { 'profileType':'socialicons',   'socialicons':'profile'})|raw}}
+                    {{widget('profile', 'footercolumn1profilecopyright', { 'profileType':'copyright',   'copyright':'profile'})|raw}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+
+{% endblock %}

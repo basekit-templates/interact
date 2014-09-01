@@ -1,0 +1,384 @@
+// -----------------------------
+// Imports
+// -----------------------------
+
+@import "@{templateCommon}/basekit-bootstrap.less";
+@import "@{templateLocal}/css/widgets.less";
+@import "@{templateLocal}/css/ecommerce.less";
+
+// -----------------------------
+// Page Settings
+// -----------------------------
+
+body {
+    width: 100%; 
+    height: 100%;
+    background-position: 0px 0px;
+    background-image: image('/images/background-texture.png');
+}
+
+// Wrapper 
+.wrapper {
+    width: 80%;
+    margin: 0 10%;
+    @media @mobile {
+        width:90%;
+        margin: 0 5%;
+    }
+}
+
+ul, li {
+	margin: 0;
+}
+
+.page-wrap {
+    padding:40px 0px;
+}
+
+/*  ===============================
+    Header
+    =============================== */
+
+.widgetheader {
+    background-color:@color-swatch7;
+    -webkit-box-shadow: 3px 3px 0 1px fade(@color-swatch4,10%);;
+    box-shadow: 3px 3px 0 1px fade(@color-swatch4,10%);
+    padding-top:10px;
+}
+
+.widgetheader .right-header {
+    float:right;
+    max-width:50%;
+    padding:10px 0px;
+    display:inline-block;
+    @media @tablet {
+        max-width:100%;
+        width:100%;
+    }
+}
+
+.widgetheader .widget.profile .bk-profile-socialicons, .widget.profile span, .widget.profile p {
+    @media @tablet {
+        text-align:center;
+        float:none;
+        margin: 0px auto;
+        display: table;
+    }
+}
+
+.widgetheader .widget.content p {
+    color:@font-swatch1-color;
+    font-weight:@font-swatch10-font-weight;
+    line-height:@font-swatch5-line-height;
+    @media @tablet {
+        width:100%;
+        text-align:center;
+    }
+}
+
+.left-header .widget.profile span {
+    color:@font-swatch1-color;
+    font-weight:@font-swatch10-font-weight;
+    @media @tablet {
+        width:100%;
+        text-align:center;
+    }
+}
+
+.left-header .bk-profile-address p {
+    float:right;
+    font-weight: @font-swatch4-font-weight;
+    color: @font-swatch1-color;
+    float:left!important;
+    padding-right:5px;
+}
+
+.left-header .bk-profile-email a {
+    font-weight: @font-swatch4-font-weight;
+}
+
+header.bk-header {
+    padding:60px 0px 40px;
+    margin: 0px auto;
+    display: table;
+    @media @mobile {
+        padding:25px 0px 0px;
+    }
+}
+
+.left-header {
+    max-width: 50%;
+    float: left;
+    padding:10px 0px;
+    display:inline-block;
+    @media @tablet {
+        width:100%;
+        max-width: none;
+    }
+}
+
+.left-header .bk-profile-email {
+    text-align:center;
+}
+
+.widget.content .bk-content-text {
+    overflow: inherit;
+}
+
+.logo {
+    margin: 0px auto;
+    display: table;
+    width: 100%;
+    text-align: center;
+}
+
+.widget {
+    &.logo, &.companyname {
+        display: inline-block;
+        float:left;
+        @media @mobile {
+            float:none;
+        }
+    }
+    &.logo img {
+        vertical-align: bottom;
+    }
+}
+
+.widget.companyname {
+    margin-top:8px;
+    margin-left:5px;
+    width:100%;
+    @media @mobile {
+        margin-top:0;
+    }
+}
+
+.widget.companyname a, h1, h2, h3, h4, h5, .contactform label, .widget .extendednavigation ul li a, button.btn, .widget.clicktocall a {
+    text-shadow: 3px 3px 0 fade(@color-swatch4,10%);
+}
+
+/*  ===============================
+    Default Page
+    =============================== */
+
+.bk-pt-default .navbar {
+    bottom: -20px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/*  ===============================
+    Extended Navigation
+    =============================== */
+
+.navbar {
+    background-color: @color-swatch4;
+    position: relative;
+    bottom: -25px;
+    z-index: 9999;
+    @media @tablet {
+        bottom: -20px;
+    }
+}
+
+.widget.extendednavigation {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    vertical-align: bottom;
+    -webkit-box-shadow: 3px 3px 0 1px fade(@color-swatch4,10%);;
+    box-shadow: 3px 3px 0 1px fade(@color-swatch4,10%);
+    padding: 10px 0px;
+    @media only screen and (max-width: 900px) {
+        display: block;
+        width: 100%;
+    }
+    @media @tablet {
+        margin-top: 0;
+        padding:20px 0px;
+    }
+    ul {
+        @media only screen and (max-width: 900px) {
+            float: none;
+        }
+        @media @tablet {
+            padding-top:30px;
+        }
+        li {
+        margin:0;
+        padding:0;
+            @media @tablet {
+                padding: 0;
+                margin: 0;
+                border-bottom:0;
+            }
+        }
+    }
+}
+
+.widget .extendednavigation ul li:hover ul {
+    background-color:@color-swatch4;
+    -webkit-box-shadow: 3px 3px 0 1px fade(@color-swatch4,10%);
+    box-shadow: 3px 3px 0 1px fade(@color-swatch4,10%);
+    @media @tablet {
+        margin:0;
+        background-color:lighten(@color-swatch4,5%);
+    }
+}
+
+.widget .extendednavigation ul li a {
+    padding: 5px 20px;
+}
+
+.widget .extendednavigation > ul > li > a, .widget .extendednavigation ul li.folder > .text {
+    padding:5px 20px;
+}
+
+.extendednavigation li.selected {
+    a, .text {
+        color: @font-swatch6-color-hover;
+    }
+}
+
+.widget .extendednavigation ul li.folder:after {
+    border-top-color:@font-swatch6-color;
+    @media @tablet {
+         right:10px;
+    }
+}
+
+.widget .extendednavigation {
+    @media @tablet {
+        a.pull {
+            top:0;
+            display: table;
+            margin:0px auto;
+            left:0;
+        }
+    }
+}
+
+
+.widget .extendednavigation a.pull {
+    &:after {
+        background: @color-swatch1;
+        box-shadow: 0 6px 0 @color-swatch1, 0 12px 0 @color-swatch1;
+    }
+    @media @tablet {
+        top: 12px;
+        left:-15px;
+    }
+}
+
+.widget.extendednavigation .bk-overlay {
+    width:100%;
+    left:auto;
+    top:-15px;
+}
+
+// -----------------------------
+// Feature
+// -----------------------------
+
+.widget.feature {
+	margin-bottom:20px;
+}
+
+// -----------------------------
+// Footer
+// -----------------------------
+
+footer.bk-footer {
+	background-color:@color-swatch4;
+    padding:100px 0px;
+    @media @mobile {
+        padding:50px 0px;
+    }
+}
+
+.left-footer .widget.content h1,
+.left-footer .widget.content h2,
+.left-footer .widget.content h3,
+.left-footer .widget.content h4, 
+.left-footer .widget.content p, 
+.left-footer .widget.content span,
+.left-footer .widget.content a,  
+.right-footer .widget.profile span, 
+.right-footer .widget.profile p, 
+.right-footer .widget.profile a {
+    color:@font-swatch7-color;
+}
+
+.right-footer {
+    float:left;
+    @media @mobile {
+        float:none;
+        text-align:center;
+    }
+}
+
+footer.bk-footer .widget.profile p, footer.bk-footer .widget.profile p
+span, footer.bk-footer .widget.profile a  {
+    text-align:left;
+    float:left;
+}
+
+.widget.profile .bk-profile-socialicons {
+    margin:0;
+}
+
+.widget.socialicons span a, .widget.profile .bk-profile-socialicons span a {
+  text-align:center;
+}
+
+.bk-profile-address p {
+    color: @font-swatch1-color;
+    float:left!important;
+    padding-right:5px;
+}
+
+.widget.profile .bk-profile-socialicons, .widget.profile p {
+    float:left;
+}
+
+.left-footer {
+    @media @mobile {
+        text-align:center;
+    }
+}
+
+footer.bk-footer .widget.profile .bk-profile-socialicons, .widget.profile span, .widget.profile p {
+    @media @mobile {
+        text-align:center;
+        float:none;
+    }
+}
+
+.footer-profile {
+    display:inline-block;
+    float:left;
+    width:100%;
+    @media @mobile {
+        float:none;
+    }
+}
+
+.footer-profile .widget.profile form {
+    text-align:left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

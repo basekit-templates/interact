@@ -1,0 +1,147 @@
+{
+	"name":"Desktop",
+	"thumbnail":"desktop.png",
+	"screenshot":"desktop.png",
+    "tags": { "en": ["minimal", "clean", "slideshow", "red", "portfolio", "box-shadow", "bright", "art", "design"] },
+    "pageTypes":["home"],
+    "templateType":"standard",
+    "colorSwatches":
+    {
+        "Swatch 1": {
+            "color1":"#ffffff",
+            "color2":"#01b4f0",
+            "color3":"#e03531",
+            "color4":"#291716",
+            "color5":"#888888",
+            "color6":"#ffffff",
+            "color7":"#eeeeee"
+        },
+        "Swatch 2": {
+            "color1":"#ffffff",
+            "color2":"#01b4f0",
+            "color3":"#841c2f",
+            "color4":"#291716",
+            "color5":"#888888",
+            "color6":"#ffffff",
+            "color7":"#eeeeee"
+        },
+        "Swatch 3": {
+            "color1":"#ffffff",
+            "color2":"#01b4f0",
+            "color3":"#4F7391",
+            "color4":"#291716",
+            "color5":"#888888",
+            "color6":"#ffffff",
+            "color7":"#eeeeee"
+        },
+        "Swatch 4": {
+            "color1":"#ffffff",
+            "color2":"#01b4f0",
+            "color3":"#73AD5C",
+            "color4":"#291716",
+            "color5":"#888888",
+            "color6":"#ffffff",
+            "color7":"#eeeeee"
+        },
+        "Swatch 5": {
+            "color1":"#ffffff",
+            "color2":"#01b4f0",
+            "color3":"#4BA5A1",
+            "color4":"#291716",
+            "color5":"#888888",
+            "color6":"#ffffff",
+            "color7":"#eeeeee"
+        }
+    },
+    "images":[
+        "images/test.jpg"
+    ],
+    "fontSwatch": {
+       "title": "Raleway",
+        "font1": {
+            "font-family": "\"Raleway\", \"Lucida Grande\", Helvetica, sans-serif",
+            "font-size": "42px",
+            "font-weight": "700",
+            "line-height": "50px",
+            "color": "@color-swatch3",
+            "letter-spacing": "inherit"
+        },
+        "font2": {
+            "font-family": "\"Raleway\", \"Lucida Grande\", Helvetica, sans-serif",
+            "font-size": "36px",
+            "font-weight": "700",
+            "line-height": "44px",
+            "color": "@color-swatch4",
+            "letter-spacing": "inherit"
+        },
+        "font3": {
+            "font-family": "\"Raleway\", \"Lucida Grande\", Helvetica, sans-serif",
+            "font-size": "26px",
+            "font-weight": "700",
+            "line-height": "34px",
+            "color": "@color-swatch4",
+            "letter-spacing": "inherit"
+        },
+        "font4": {
+            "font-family": "\"Raleway\", \"Lucida Grande\", Helvetica, sans-serif",
+            "font-size": "18px",
+            "font-weight": "700",
+            "line-height": "30px",
+            "color": "@color-swatch4",
+            "letter-spacing": "inherit"
+        },
+        "font5": {
+            "font-family": "\"Raleway\", \"Lucida Grande\", Helvetica, sans-serif",
+            "font-size": "16px",
+            "font-weight": "400",
+            "line-height": "24px",
+            "color": "@color-swatch4",
+            "letter-spacing": "inherit"
+        },
+        "font6": {
+            "font-family": "\"Raleway\", \"Lucida Grande\", Helvetica, sans-serif",
+            "font-size": "14px",
+            "font-weight": "700",
+            "line-height": "24px",
+            "color": "@color-swatch6",
+            "letter-spacing": "inherit",
+            "color-hover": "@color-swatch3",
+            "background-color": "@color-swatch2",
+            "background-color-hover": "@color-swatch2"
+         },
+        "font7": {
+            "font-family": "\"Raleway\", \"Lucida Grande\", Helvetica, sans-serif",
+            "font-size": "14px",
+            "font-weight": "700",
+            "line-height": "24px",
+            "color": "@color-swatch1",
+            "letter-spacing": "1px",
+            "background-color": "@color-swatch3",
+            "background-color-hover": "darken(@color-swatch3,10%)"
+        },
+        "font8": {
+            "font-family": "\"Raleway\", \"Lucida Grande\", Helvetica, sans-serif",
+            "font-size": "36px",
+            "font-weight": "700",
+            "line-height": "44px",
+            "color": "@color-swatch1",
+            "letter-spacing": "inherit"
+        },
+        "font9": {
+            "font-family": "\"Raleway\", \"Lucida Grande\", Helvetica, sans-serif",
+            "font-size": "24px",
+            "font-weight": "inherit",
+            "line-height": "36px",
+            "color": "@color-swatch1",
+            "letter-spacing": "inherit"
+        },
+        "font10": {
+            "font-family": "\"Raleway\", \"Lucida Grande\", Helvetica, sans-serif",
+            "font-size": "40px",
+            "font-weight": "700",
+            "line-height": "36px",
+            "color": "@color-swatch4",
+            "letter-spacing": "inherit"
+        }
+    }
+}
