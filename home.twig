@@ -3,59 +3,61 @@
 
 {% block content %}
 
-  <div class="widgetheader clearfix">
-      <div class="wrapper">
-          <div class="left-header">
-              {{widget('profile', 'headercolumn1profilePhone', { 'profileType':'phone', 'phone':'profile'})|raw}} 
-          </div>
-          <div class="right-header">
-              {{widget('content', 'textwidgetbox1', {content: '<p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit."</p>', lines: 'all'})|raw}}
-          </div>
-      </div>
-  </div>
+<header class="bk-header">
+  <div class="companyheader wrapper clearfix">
+        {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+        {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
+        {{widget('extendednavigation', 'navigationheader', {})|raw}}
+   </div>
+</header>         
 
-<header class="bk-header clearfix">
-    <div class="wrapper">
-        <div class="logo">
-            {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
-            {{widget('companyname', 'companyname', {"business": "DESKTOP"})|raw}}
-        </div>
+<div id="owl-demo" class="owl-carousel owl-theme wrapper">
+
+    <div class="item">
+      <section class="text">
+            <span>{{widget('content', 'textwidgetbox1', {content: '<h3 style="text-align:left">Phase one: Interaction and Experience</h3>', lines: 'all'})|raw}}</span>
+            <span>{{widget('content', 'textwidgetbox1', {content: '<h4 style="text-align:left">Interaction is the key to connecting the user to the best experience possible.</h4>', lines: 'all'})|raw}}</span>
+</section>
     </div>
-</header> 
-
-<div class="navbar wrapper clearfix">
-        {{widget('extendednavigation', 'navigationheader', {"align":"center"})|raw}}
+    <div class="item">
+      <section class="text">
+            <span>{{widget('content', 'textwidgetbox1', {content: '<h3 style="text-align:left">Phase one: Interaction and Experience</h3>', lines: 'all'})|raw}}</span>
+            <span>{{widget('content', 'textwidgetbox1', {content: '<h4 style="text-align:left">Interaction is the key to connecting the user to the best experience possible.</h4>', lines: 'all'})|raw}}</span>
+</section>
+    </div>
+    <div class="item">
+      <section class="text">
+            <span>{{widget('content', 'textwidgetbox1', {content: '<h3 style="text-align:left">Phase one: Interaction and Experience</h3>', lines: 'all'})|raw}}</span>
+            <span>{{widget('content', 'textwidgetbox1', {content: '<h4 style="text-align:left">Interaction is the key to connecting the user to the best experience possible.</h4>', lines: 'all'})|raw}}</span>
+    </div>
+    </section>
+ 
 </div>
 
-<section class="feature-slideshow">
-    {{widget('responsiveslideshow', 'responsiveslideshow',
-        {'duration':'5',
-            'transSpeed': '1500',
-            'transType': 'fade',
-            'showButtons': true,
-            'showBullets': false,
-            'allowPause': false,
-            'allowLoop': true,
-            'showDescription': true,
-            'showTitle': true,
-            'crop': true,
-            'images': [
-                {'url':asset('/images/slideshow/slideshow-img1.jpg'),'title':'test title','description': 'test desc'},
-                {'url':asset('/images/slideshow/slideshow-img2.jpg'),'title':'test title','description': 'test desc'},
-                {'url':asset('/images/slideshow/slideshow-img3.jpg'),'title':'test title','description': 'test desc'}
-            ]
-        })|raw
-    }}
-</section>
+
+    <section class="bk-section">
+        {{widget('gallery', 'gallery1', 
+        {'albumRef':0,
+        'showDescription': true,
+        'showTitle': true,
+        'images':
+        [
+        {'imageHeight':'246', 'imageWidth':'246', 'url':asset('/images/gallery/1.jpg'), 'title':'Image 1',  'description': 'This is image 1'},
+        {'imageHeight':'246', 'imageWidth':'246', 'url':asset('/images/gallery/2.jpg'), 'title':'Image 2',  'description': 'This is image 2'},
+        {'imageHeight':'246', 'imageWidth':'246', 'url':asset('/images/gallery/3.jpg'), 'title':'Image 3',  'description': 'This is image 3'},
+        {'imageHeight':'246', 'imageWidth':'246', 'url':asset('/images/gallery/4.jpg'), 'title':'Image 4',  'description': 'This is image 4'},
+        {'imageHeight':'246', 'imageWidth':'246', 'url':asset('/images/gallery/5.jpg'), 'title':'Image 5',  'description': 'This is image 5'},
+        {'imageHeight':'246', 'imageWidth':'246', 'url':asset('/images/gallery/6.jpg'), 'title':'Image 6',  'description': 'This is image 6'},  
+        ]
+        })|raw}}
+    </section>
 
 
 
 <div class="page-wrap">
-	<div class="wrapper">
 		<div class="mainzone headerwrapper">
 			{{zone('main')|raw}}
 		</div>
-	</div>
 </div>
 
 <footer class="bk-footer">
@@ -80,3 +82,29 @@
     </footer>
 
 {% endblock %}
+
+{% block bodyscripts %}
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="{{asset('js/owl-carousel/owl.carousel.js')}}"></script>
+
+
+<script>
+    jQuery(document).ready(function() {
+
+      $("#owl-demo").owlCarousel({
+        lazyLoad : true,
+        navigation : true,
+        slideSpeed: 200,
+        autoPlay: true,
+        stopOnHover: true,
+        items : 1, 
+        itemsDesktop : false, 
+        itemsDesktopSmall : false,
+        itemsTablet: [769,2], 
+        itemsMobile : [478,1]
+      });
+    });
+</script>  
+
+{% endblock %}  
