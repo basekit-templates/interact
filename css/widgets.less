@@ -61,7 +61,6 @@ textarea,
 }
 
 // Contact, Signup, Profile, Delivery
-.contactform,
 .signupform,
 .canvas .widget.profile form,
 .bottom-profile .widget.profile form,
@@ -77,6 +76,24 @@ textarea,
 	}
 }
 // Form
+
+.contactform {
+	background-image: image('/images/send-icon.png');
+	background-repeat: no-repeat;
+	background-position: top 16px center;
+	padding-top: 40px;
+	background-color: lighten(@color-swatch4,20%);
+	button.btn {
+		margin-top:13px;
+	}
+}
+
+.widget.contactform fieldset {
+	background-color: darken(@color-swatch1,5%);
+	padding: 20px;
+} 
+
+
 .widget.profile form {
 	margin: 0;
 	padding: 0;
@@ -142,18 +159,17 @@ button.btn,
 .widget.ecomcheckout .checkout-order-button,
 .blog-list-footer a {
 	background-color:@font-swatch7-background-color;
-	-webkit-box-shadow: 3px 3px 0 1px fade(@color-swatch4,10%);
-    box-shadow: 3px 3px 0 1px fade(@color-swatch4,10%);
     color:@font-swatch7-color;
-    padding:15px 20px;
+    padding:10px 70px 10px 20px;
+    background-image: image('/images/button-arrow.png');
+	background-repeat: no-repeat;
+	background-position: top 14px right 24px;
 }
 
 
 .widget.clicktocall a {
 	@media @mobile {
 		padding:15px 20px 15px 40px;
-		-webkit-box-shadow: 3px 3px 0 1px fade(@color-swatch4,10%);
-    	box-shadow: 3px 3px 0 1px fade(@color-swatch4,10%);
 		&:hover {
 			padding:15px 20px 15px 40px;
 		}
@@ -172,15 +188,7 @@ button.btn,
 .widget.tweet a, .widget.dropbox button, .widget.paypalbuynow .widget.button.paypal {
 	padding:15px 20px 15px 40px;
 	background-color:@font-swatch7-background-color;
-	-webkit-box-shadow: 3px 3px 0 1px fade(@color-swatch4,10%);
-    box-shadow: 3px 3px 0 1px fade(@color-swatch4,10%);
     color:@font-swatch7-color;
-}
-
-.blog-post-more-link a {
-	-webkit-box-shadow: 3px 3px 0 1px fade(@color-swatch4,10%)!important;
-    box-shadow: 3px 3px 0 1px fade(@color-swatch4,10%)!important;
-    padding:15px 20px!important;
 }
 
 .blogsearch form button {
@@ -232,8 +240,6 @@ button:hover, .widget.button button:hover {
 .widget.twitter {
 	margin: 20px 0;
 	img {
-		-webkit-box-shadow: 3px 3px 0 1px fade(@color-swatch4,10%);
-    	box-shadow: 3px 3px 0 1px fade(@color-swatch4,10%);
 	}
 	p {
 		color: @color-swatch4;
@@ -249,7 +255,6 @@ button:hover, .widget.button button:hover {
 		padding-bottom: 0;
 	}
 	span {
-		text-shadow: 3px 3px 0 fade(@color-swatch4,10%);
 	}
 	// Tweet Content
 	.twitter-content {
@@ -306,8 +311,6 @@ body.edit .slideshow-empty {
 }
 
 .feature-slideshow .widget.responsiveslideshow {
-	-webkit-box-shadow: 3px 3px 0 1px fade(@color-swatch4,10%);;
-    box-shadow: 3px 3px 0 1px fade(@color-swatch4,10%);
 }
 
 .feature-slideshow .widget.responsiveslideshow .slideshow-image-list {
@@ -413,121 +416,6 @@ body.edit .slideshow-empty {
 	background-size:cover;
 }
 
-.feature-slideshow .widget.responsiveslideshow {
-    .slideshow-image-list,
-    .slideshow-widget {
-        min-height: 650px;
-        @media @tablet {
-            min-height: 450px;
-        }
-        @media @mobile {
-            min-height: 280px;
-            height: 280px;
-        }
-    }
-    .slideshow-widget {
-
-    			.btns-move {
-			.btn-prev {
-				left:0;
-				background: @color-swatch1;
-				padding: 40px 50px;
-				-webkit-box-shadow: 3px 3px 0 1px fade(@color-swatch4,10%);;
-    			box-shadow: 3px 3px 0 1px fade(@color-swatch4,10%);
-    			@media @tablet {
-    				padding:20px 30px;
-    			}
-    			@media @mobile {
-    				padding:10px 20px;
-    			}
-			}
-			.btn-next {
-				right:0;
-				background: @color-swatch1;
-				padding: 40px 50px;
-				-webkit-box-shadow: 3px 3px 0 1px fade(@color-swatch4,10%);;
-    			box-shadow: 3px 3px 0 1px fade(@color-swatch4,10%);
-    			@media @tablet {
-    				padding:20px 30px;
-    			}
-    			@media @mobile {
-    				padding:10px 20px;
-    			}
-			}
-		}
-        /* Arrows */
-        .btn-prev,
-        .btn-next {
-            text-indent: -99999px;
-        }
-        .btn-prev {
-            &:after {
-                content: "\3008";
-                color: @color-swatch3;
-                top: 40px;
-                font-size:60px;
-                left: -20px;
-                @media @tablet {
-                	top: 22px;
-					font-size: 40px;
-					left: -15px;
-                }
-                @media @mobile {
-                    top: 12px;
-					font-size: 30px;
-					left: -5px;
-                }
-            }
-        }
-        .btn-next {
-            &:after {
-                content: "\3009";
-                color: @color-swatch3;
-                top: 40px;
-                font-size:60px;
-                left:40px;
-                width:0;
-                @media @tablet {
-                	top: 22px;
-					font-size: 40px;
-					left: 25px;
-                }
-                @media @mobile {
-                    top: 12px;
-					font-size: 30px;
-					left: 10px;
-                }
-            }
-        }
-        /* Play Button */
-        .btn-play {
-            background: rgba(0,0,0,0.5);
-            -webkit-border-radius: 4px;
-            -moz-border-radius: 4px;
-            border-radius: 4px;
-            display:none!important;
-            &:after {
-                color: #fff;
-                letter-spacing: -4px;
-                top: 0;
-            }
-        }
-    }
-    /* Slideshow Controls */
-    .slideshow-widget-controls {
-        .dot {
-            width: 11px;
-            height: 11px;
-            -webkit-border-radius: 50%;
-            -moz-border-radius: 50%;
-            border-radius: 50%;
-            &.selected {
-                background-color: @color-swatch5;
-            }
-        }
-    }
-}
-
 // -----------------------------
 // Slideshow
 // -----------------------------
@@ -550,14 +438,11 @@ body.edit .slideshow-empty {
         }
     }
     .slideshow-widget {
-
-    			.btns-move {
+    		.btns-move {
 			.btn-prev {
 				left:0;
 				background: @color-swatch1;
 				padding: 10px 20px;
-				-webkit-box-shadow: 3px 3px 0 1px fade(@color-swatch4,10%);;
-    			box-shadow: 3px 3px 0 1px fade(@color-swatch4,10%);
     			@media @tablet {
     				padding:10px 20px;
     			}
@@ -569,8 +454,6 @@ body.edit .slideshow-empty {
 				right:0;
 				background: @color-swatch1;
 				padding:  10px 20px;
-				-webkit-box-shadow: 3px 3px 0 1px fade(@color-swatch4,10%);;
-    			box-shadow: 3px 3px 0 1px fade(@color-swatch4,10%);
     			@media @tablet {
     				padding:10px 20px;
     			}
@@ -659,8 +542,14 @@ body.edit .slideshow-empty {
 // -----------------------------
 
 .widget.gallery {
-    margin: 20px 0 20px -0.5%;
-    ul li {
+    margin-left:0;
+    ul {
+    	margin-bottom:30px;
+    	margin-right:20px;
+    	}
+    	li {
+    	    width: 33.33%;
+    		padding-bottom:20%;
         @media @tablet {
             width: 50%;
             padding-bottom: 50%;
@@ -670,6 +559,10 @@ body.edit .slideshow-empty {
             padding-bottom: 100%;
         }
         span.inner {
+        	left:0;
+    		right: 5px;
+    		width:100%;
+    		bottom:0;
             .title,
             .description {
                 // Font
@@ -702,6 +595,10 @@ body.edit .slideshow-empty {
             opacity: 0.9;
         }
     }
+}
+
+.widget.gallery ul li {
+	padding-bottom:20%;
 }
 
 // -----------------------------
@@ -808,15 +705,11 @@ body.edit .slideshow-empty {
 .menu-item-promoted {
   background-color: darken(@color-swatch1,6%);
   padding:20px!important;
-  -webkit-box-shadow: 3px 3px 0 1px fade(@color-swatch4,20%);
-  box-shadow: 3px 3px 0 1px fade(@color-swatch4,20%);
 }
 
 .menu-subsection-wrapper.menu-subsection-promoted {
   background-color: darken(@color-swatch1,6%);
   padding:40px;
-  -webkit-box-shadow: 3px 3px 0 1px fade(@color-swatch4,20%);
-  box-shadow: 3px 3px 0 1px fade(@color-swatch4,20%);
 }
 
 // -----------------------------
@@ -834,10 +727,6 @@ body.edit .slideshow-empty {
 
 .blog-post-more-link {
 	margin-bottom: 10px;
-	a {
-		padding: 6px 10px;
-		box-shadow: 2px 2px 0 #ffffff, 4px 4px 0 #01b4f0;
-	}
 }
 
 .blog-post-feature-image-wrap {
@@ -918,11 +807,8 @@ body.edit .slideshow-empty {
 
 // Sharing Buttons
 .blog-post-sharing button {
-	padding: 15px 20px;
 	box-shadow: none;
 	font-size: 14px;
-	-webkit-box-shadow: 3px 3px 0 1px fade(@color-swatch4,10%);;
-    box-shadow: 3px 3px 0 1px fade(@color-swatch4,10%);
 }
 
 // Blog Search

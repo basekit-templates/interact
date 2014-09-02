@@ -4,58 +4,59 @@
 {% block content %}
 
 <header class="bk-header">
-  <div class="companyheader wrapper clearfix">
+    <div class="companyheader page-wrap clearfix">
         {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
         {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
-        {{widget('extendednavigation', 'navigationheader', {})|raw}}
-   </div>
+    </div>
+    <div class="nav-container clearfix">
+        <div class="page-wrap">
+            {{widget('extendednavigation', 'navigationheader', {})|raw}}
+        </div>
+    </div>
 </header>         
 
-<div id="owl-demo" class="owl-carousel owl-theme wrapper">
+<div id="owl-demo" class="owl-carousel owl-theme page-wrap">
     <div class="item">
-        <section class="text">
+        <section class="carousel-text">
             <span>{{widget('content', 'textwidgetbox1', {content: '<h3 style="text-align:left">Phase one: Interaction and Experience</h3>', lines: 'all'})|raw}}</span>
             <span>{{widget('content', 'textwidgetbox2', {content: '<h4 style="text-align:left">Interaction is the key to connecting the user to the best experience possible.</h4>', lines: 'all'})|raw}}</span>
         </section>
     </div>
     <div class="item">
-        <section class="text">
+        <section class="carousel-text">
             <span>{{widget('content', 'textwidgetbox3', {content: '<h3 style="text-align:left">Phase one: Interaction and Experience</h3>', lines: 'all'})|raw}}</span>
             <span>{{widget('content', 'textwidgetbox4', {content: '<h4 style="text-align:left">Interaction is the key to connecting the user to the best experience possible.</h4>', lines: 'all'})|raw}}</span>
         </section>
     </div>
     <div class="item">
-        <section class="text">
+        <section class="carousel-text">
             <span>{{widget('content', 'textwidgetbox5', {content: '<h3 style="text-align:left">Phase one: Interaction and Experience</h3>', lines: 'all'})|raw}}</span>
             <span>{{widget('content', 'textwidgetbox6', {content: '<h4 style="text-align:left">Interaction is the key to connecting the user to the best experience possible.</h4>', lines: 'all'})|raw}}</span>
         </section>
     </div>
 </div>
 
-
-    <section class="bk-section">
-        {{widget('gallery', 'gallery1', 
-        {'albumRef':0,
-        'showDescription': true,
-        'showTitle': true,
-        'images':
-        [
-        {'imageHeight':'246', 'imageWidth':'246', 'url':asset('/images/gallery/1.jpg'), 'title':'Image 1',  'description': 'This is image 1'},
-        {'imageHeight':'246', 'imageWidth':'246', 'url':asset('/images/gallery/2.jpg'), 'title':'Image 2',  'description': 'This is image 2'},
-        {'imageHeight':'246', 'imageWidth':'246', 'url':asset('/images/gallery/3.jpg'), 'title':'Image 3',  'description': 'This is image 3'},
-        {'imageHeight':'246', 'imageWidth':'246', 'url':asset('/images/gallery/4.jpg'), 'title':'Image 4',  'description': 'This is image 4'},
-        {'imageHeight':'246', 'imageWidth':'246', 'url':asset('/images/gallery/5.jpg'), 'title':'Image 5',  'description': 'This is image 5'},
-        {'imageHeight':'246', 'imageWidth':'246', 'url':asset('/images/gallery/6.jpg'), 'title':'Image 6',  'description': 'This is image 6'},  
-        ]
-        })|raw}}
-    </section>
-
-
+<section class="bk-section">
+    {{widget('gallery', 'gallery1', 
+    {'albumRef':0,
+    'showDescription': true,
+    'showTitle': true,
+    'images':
+    [
+    {'imageHeight':'246', 'imageWidth':'246', 'url':asset('/images/gallery/1.jpg'), 'title':'Image 1',  'description': 'This is image 1'},
+    {'imageHeight':'246', 'imageWidth':'246', 'url':asset('/images/gallery/2.jpg'), 'title':'Image 2',  'description': 'This is image 2'},
+    {'imageHeight':'246', 'imageWidth':'246', 'url':asset('/images/gallery/3.jpg'), 'title':'Image 3',  'description': 'This is image 3'},
+    {'imageHeight':'246', 'imageWidth':'246', 'url':asset('/images/gallery/4.jpg'), 'title':'Image 4',  'description': 'This is image 4'},
+    {'imageHeight':'246', 'imageWidth':'246', 'url':asset('/images/gallery/5.jpg'), 'title':'Image 5',  'description': 'This is image 5'},
+    {'imageHeight':'246', 'imageWidth':'246', 'url':asset('/images/gallery/6.jpg'), 'title':'Image 6',  'description': 'This is image 6'},  
+    ]
+    })|raw}}
+</section>
 
 <div class="page-wrap">
-		<div class="mainzone headerwrapper">
-			{{zone('main')|raw}}
-		</div>
+	<div class="mainzone headerwrapper">
+		{{zone('main')|raw}}
+	</div>
 </div>
 
 <footer class="bk-footer">
@@ -68,11 +69,8 @@
                     </div>
                 </div>
                 <div class="column columns-two-right">
-                <div class="right-footer">
-                    {{widget('profile', 'footercolumn1profilesocialicons', { 'profileType':'socialicons',   'socialicons':'profile'})|raw}}
-                    <div class="footer-profile">
-                        {{widget('profile', 'footercolumn1profilecopyright', { 'profileType':'copyright',   'copyright':'profile'})|raw}}
-                    </div>
+                    <div class="right-footer">
+                        {{widget('profile', 'footercolumn1profilesocialicons', { 'profileType':'socialicons',   'socialicons':'profile'})|raw}}
                     </div>
                 </div>
             </div>
@@ -85,7 +83,6 @@
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src="{{asset('js/owl-carousel/owl.carousel.js')}}"></script>
-
 
 <script>
     jQuery(document).ready(function() {
