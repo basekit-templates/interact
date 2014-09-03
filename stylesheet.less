@@ -36,6 +36,14 @@ ul, li {
     padding:40px 0px;
     width: 960px;
     margin: 0px auto;
+    @media (max-width: 1024px) {
+        width: 90%;
+        margin: 0px 5%;
+    @media @tablet {
+        width: 90%;
+        margin: 0px 5%;
+        }
+    }
 }
 
 /*  ===============================
@@ -55,6 +63,14 @@ header.bk-header {
         line-height:@font-swatch9-line-height; 
         letter-spacing: @font-swatch9-letter-spacing; 
         font-size: @font-swatch9-font-size;
+        @media @tablet {
+            font-size: (@font-swatch9-font-size * 0.8);
+            line-height: (@font-swatch9-line-height * 0.8);
+        @media @mobile {
+            font-size: (@font-swatch9-font-size * 0.5);
+            line-height: (@font-swatch9-line-height * 0.5);
+        }
+    }
     }
     h4 {
         font-family:@font-swatch8-font-family; 
@@ -63,6 +79,14 @@ header.bk-header {
         line-height:@font-swatch8-line-height; 
         letter-spacing: @font-swatch8-letter-spacing; 
         font-size: @font-swatch8-font-size;
+        @media @tablet {
+            font-size: (@font-swatch8-font-size * 0.8);
+            line-height: (@font-swatch8-line-height * 0.8);
+        @media @mobile {
+            font-size: (@font-swatch8-font-size * 0.1);
+            line-height: (@font-swatch8-line-height * 0.1);
+        }
+    }
     }
 } 
 
@@ -145,8 +169,14 @@ header.bk-header {
     ul {
         display:none;
         width:100%;
+        @media @tablet {
+            padding:0;
+        }
         li {
             padding:0;
+            @media @tablet {
+                border-bottom:none;
+            }
             @media @mobile {
                 padding:0;
             }
@@ -212,6 +242,9 @@ header.bk-header {
     margin: 0px auto;
     display: table;
     left: 0;
+    @media @tablet {
+        box-shadow:none;
+    }
 }
 
 // -----------------------------
@@ -228,10 +261,6 @@ header.bk-header {
 
 footer.bk-footer {
 	background-color:@color-swatch4;
-    padding:50px 0px;
-    @media @mobile {
-        padding:50px 0px;
-    }
 }
 
 .left-footer .widget.content h1,
@@ -248,7 +277,7 @@ footer.bk-footer {
 }
 
 .right-footer {
-    float:left;
+    float:right;
     @media @mobile {
         float:none;
         text-align:center;

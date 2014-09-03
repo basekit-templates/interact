@@ -57,6 +57,12 @@
 .owl-controls .owl-buttons div{
     cursor: pointer;
 }
+
+.owl-buttons {
+    position:relative;
+    top:180px;
+}
+
 .owl-controls {
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -82,12 +88,11 @@
   -ms-transform: translate3d(0,0,0);
 }
 
-
 // Button Styles
 .owl-theme .owl-controls .owl-buttons div {
     color: transparent;
     font-size: 10px;
-    @media (max-width: 1024px) {
+    @media (max-width: 2024px) {
         color: #fff;
     }
 }
@@ -97,14 +102,14 @@
     position: absolute;
     top: 40%;
     width: 100%;
-    @media (max-width: 1024px) {
+    @media (max-width: 2024px) {
         top: -54px;
     }
 }
 
 // Feature Page - Buttons Styles
 .owl-carousel.features .owl-controls {
-    @media (max-width: 1024px) {
+    @media (max-width: 2024px) {
         top: -54px;
         .owl-prev, .owl-next {
             padding: 1.5px 7px;
@@ -124,17 +129,15 @@
 // Prev
 .owl-prev {
     position: absolute;
-    left: -36px;
-    background: image('js/owl-carousel/arrow-prev.png') no-repeat center;
-    @media (max-width: 1024px) {
-        left: inherit;
-        right: 48px;
-        background-color: rgba(0, 0, 0, 0.3);
-        background-image: none;
-        padding: 4px 10px;
-        font-size: 12px!important;
-        &:hover {
-            background: rgba(0,0,0,0.6);
+    left: -240px;
+        &:after {
+            content: "\3008";
+            color: @color-swatch3;
+            top: 40px;
+            font-size:80px;
+            left: -30px;
+            &:hover {
+                background: rgba(0,0,0,0.6);
         }
     }
 }
@@ -142,14 +145,15 @@
 // Next
 .owl-next {
     position: absolute;
-    right: -25px;
-    background: image('js/owl-carousel/arrow-next.png') no-repeat center;
-    @media (max-width: 1024px) {
-        right: 0;
-        background-color: rgba(0, 0, 0, 0.3);
-        background-image: none;
-        padding: 4px 10px;
-        font-size: 12px!important;
+    right: -155px;
+        &:after {
+            content: "\3009";
+            color: @color-swatch3;
+            top: 40px;
+            font-size:80px;
+            left:40px;
+            width:0;
+            right: 0;
         &:hover {
             background: rgba(0,0,0,0.6);
         }

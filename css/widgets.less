@@ -147,7 +147,6 @@ input,textarea {
 .widget.button button,
 button.btn, 
 .widget.profile form button, 
-.signupform fieldset button, 
 .contactform button.btn, 
 .btn,
 .blogsearch form button, 
@@ -160,12 +159,23 @@ button.btn,
 .blog-list-footer a {
 	background-color:@font-swatch7-background-color;
     color:@font-swatch7-color;
-    padding:10px 70px 10px 20px;
+    padding:10px 60px 10px 20px;
     background-image: image('/images/button-arrow.png');
 	background-repeat: no-repeat;
 	background-position: top 14px right 24px;
 }
 
+.signupform fieldset button {
+	background-color:@font-swatch7-background-color;
+    color:@font-swatch7-color;
+    padding:10px 60px 10px 20px;
+    background-image: image('/images/button-arrow.png');
+	background-repeat: no-repeat;
+	background-position: top 18px right 24px;
+} 
+.blog-post-more-link a, .blogsearch form button {
+	background-size: 15px;
+}
 
 .widget.clicktocall a {
 	@media @mobile {
@@ -549,14 +559,14 @@ body.edit .slideshow-empty {
     	}
     	li {
     	    width: 33.33%;
-    		padding-bottom:20%;
+    		padding-bottom:20%!important;
         @media @tablet {
             width: 50%;
             padding-bottom: 50%;
         }
         @media @mobile {
-            width: 100%;
-            padding-bottom: 100%;
+            width: 49%!important;
+            padding-bottom: 50%!important;
         }
         span.inner {
         	left:0;
@@ -595,10 +605,6 @@ body.edit .slideshow-empty {
             opacity: 0.9;
         }
     }
-}
-
-.widget.gallery ul li {
-	padding-bottom:20%;
 }
 
 // -----------------------------
@@ -669,8 +675,6 @@ body.edit .slideshow-empty {
 // Nutritional Info
 .menu-item-nutritional-title {
 	font-size: bkscale(@font-swatch5-font-size,0.8);
-	letter-spacing: @font-swatch7-letter-spacing;
-	text-transform: uppercase;
 }
 .menu-item-nutritional-prop {
 	font-size: bkscale(@font-swatch5-font-size,0.8);
@@ -768,7 +772,6 @@ body.edit .slideshow-empty {
 .blog-list-footer {
 	margin: 10px 0 30px;
 	a {
-		padding: 6px 10px;
 		background-color: @color-swatch2;
 		color: @color-swatch1;
 		box-shadow: none;
@@ -826,7 +829,7 @@ body.edit .slideshow-empty {
 	}
 	input {
     	width: 30%;
-        height: 55px;
+        height: 45px;
         border: 1px solid darken(@color-swatch1,10%);
     	background-color: darken(@color-swatch1,4%);
     	-webkit-appearance: none;
@@ -858,8 +861,8 @@ body.edit .slideshow-empty {
   min-height:32px;
 }
 
-.widget.socialicons span a, .widget.profile .bk-profile-socialicons span a {
-  text-align:center;
+.widget.profile .bk-profile-socialicons span {
+	display:inline-table;
 }
 
 .bk-profile-socialicons span {
