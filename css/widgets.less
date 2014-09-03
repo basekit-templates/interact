@@ -175,6 +175,12 @@ button.btn,
 } 
 .blog-post-more-link a, .blogsearch form button {
 	background-size: 15px;
+	color: @font-swatch7-color;
+	font-family: @font-swatch7-font-family;
+	font-size: @font-swatch7-font-size;
+	font-weight: @font-swatch7-font-weight;
+	line-height: @font-swatch7-line-height;
+	letter-spacing: @font-swatch7-letter-spacing;
 }
 
 .widget.clicktocall a {
@@ -561,11 +567,11 @@ body.edit .slideshow-empty {
     	    width: 33.33%;
     		padding-bottom:20%!important;
         @media @tablet {
-            width: 50%;
-            padding-bottom: 50%;
+            width: 50%!important;
+            padding-bottom: 50%!important;
         }
         @media @mobile {
-            width: 49%!important;
+            width: 50%!important;
             padding-bottom: 50%!important;
         }
         span.inner {
@@ -851,11 +857,6 @@ body.edit .slideshow-empty {
 }
 
 // Social Icons
-
-.widget.socialicons span a {
-	-webkit-box-shadow: 3px 3px 0 1px fade(@color-swatch4,10%);
-    box-shadow: 3px 3px 0 1px fade(@color-swatch4,10%);
-}
 
 .widget.socialicons, .widget.profile .bk-profile-socialicons {
   min-height:32px;

@@ -92,9 +92,7 @@
 .owl-theme .owl-controls .owl-buttons div {
     color: transparent;
     font-size: 10px;
-    @media (max-width: 2024px) {
-        color: #fff;
-    }
+    color: #fff;
 }
 
 // Controls
@@ -102,14 +100,11 @@
     position: absolute;
     top: 40%;
     width: 100%;
-    @media (max-width: 2024px) {
-        top: -54px;
-    }
+    top: -54px;
 }
 
 // Feature Page - Buttons Styles
 .owl-carousel.features .owl-controls {
-    @media (max-width: 2024px) {
         top: -54px;
         .owl-prev, .owl-next {
             padding: 1.5px 7px;
@@ -117,7 +112,6 @@
         .owl-prev {
             right: 44px;
         }
-    }
     // @media (max-width: 820px) {
     //     top: -54px;
     // }
@@ -171,3 +165,33 @@
     background: image('js/owl-carousel/AjaxLoader.gif') no-repeat center center;
 }
 
+@media (max-width:1024px) {
+    .owl-next {
+        right: -45px;
+    }
+    .owl-prev {
+        left: -60px;
+    }
+    .carousel-text {
+        width: 500px;
+        margin: 0px auto;
+    }
+}
+
+@media @mobile {
+    .owl-carousel.owl-theme.page-wrap {
+        padding:0;
+    }
+    .owl-next {
+        right: -10px;
+        &:after {
+            font-size:30px;
+        }
+    }
+    .owl-prev {
+        left: -30px;
+        &:after {
+            font-size:30px;
+        }
+    }
+}

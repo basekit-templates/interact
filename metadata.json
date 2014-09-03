@@ -20,7 +20,7 @@
             "color1":"#ffffff",
             "color2":"#01b4f0",
             "color3":"#841c2f",
-            "color4":"#291716",
+            "color4":"#841c2f",
             "color5":"#888888",
             "color6":"#ffffff",
             "color7":"#eeeeee"
@@ -29,7 +29,7 @@
             "color1":"#ffffff",
             "color2":"#01b4f0",
             "color3":"#4F7391",
-            "color4":"#291716",
+            "color4":"#4F7391",
             "color5":"#888888",
             "color6":"#ffffff",
             "color7":"#eeeeee"
@@ -38,7 +38,7 @@
             "color1":"#ffffff",
             "color2":"#01b4f0",
             "color3":"#73AD5C",
-            "color4":"#291716",
+            "color4":"#73AD5C",
             "color5":"#888888",
             "color6":"#ffffff",
             "color7":"#eeeeee"
@@ -47,7 +47,7 @@
             "color1":"#ffffff",
             "color2":"#01b4f0",
             "color3":"#4BA5A1",
-            "color4":"#291716",
+            "color4":"#4BA5A1",
             "color5":"#888888",
             "color6":"#ffffff",
             "color7":"#eeeeee"
@@ -92,8 +92,8 @@
         },
         "font5": {
             "font-family": "\"Open Sans\", \"Lucida Grande\", Helvetica, sans-serif",
-            "font-size": "16px",
-            "font-weight": "400",
+            "font-size": "15px",
+            "font-weight": "300",
             "line-height": "24px",
             "color": "@color-swatch4",
             "letter-spacing": "inherit"
