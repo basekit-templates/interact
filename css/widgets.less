@@ -173,7 +173,7 @@ button.btn,
 	background-repeat: no-repeat;
 	background-position: top 18px right 24px;
 } 
-.blog-post-more-link a, .blogsearch form button {
+.blog-post-more-link a {
 	background-size: 15px;
 	color: @font-swatch7-color;
 	font-family: @font-swatch7-font-family;
@@ -181,6 +181,18 @@ button.btn,
 	font-weight: @font-swatch7-font-weight;
 	line-height: @font-swatch7-line-height;
 	letter-spacing: @font-swatch7-letter-spacing;
+	background-position: top 11px right 24px;
+}
+
+.blogsearch form button {
+	background-size: 15px;
+	color: @font-swatch7-color;
+	font-family: @font-swatch7-font-family;
+	font-size: @font-swatch7-font-size;
+	font-weight: @font-swatch7-font-weight;
+	line-height: @font-swatch7-line-height;
+	letter-spacing: @font-swatch7-letter-spacing;
+	background-position: top 14px right 24px;
 }
 
 .widget.clicktocall a {
@@ -300,6 +312,10 @@ button:hover, .widget.button button:hover {
 	text-align:left;
 }
 
+.twitter ul li a {
+	font-weight:400;
+}
+
 // -----------------------------
 // Line
 // -----------------------------
@@ -312,124 +328,6 @@ button:hover, .widget.button button:hover {
 			
 		}
 	}
-}
-
-// -----------------------------
-// Slideshow FEATURE
-// -----------------------------
-
-body.edit .slideshow-empty {
-	padding-top: 50px;
-}
-
-.feature-slideshow .widget.responsiveslideshow .content-wrapper {
-	background-color:transparent;
-}
-
-.feature-slideshow .widget.responsiveslideshow {
-}
-
-.feature-slideshow .widget.responsiveslideshow .slideshow-image-list {
-	min-height: 650px;
-}
-
-.feature-slideshow .widget.responsiveslideshow .title, .widget.responsiveslideshow .description {
-	display: inline-block;
-	width:100%;
-}
-
-.feature-slideshow .widget.responsiveslideshow .title {
-	color: @font-swatch8-color;
-	font-family: @font-swatch8-font-family;
-	font-size: @font-swatch8-font-size;
-	font-weight: @font-swatch8-font-weight;
-	line-height: @font-swatch8-line-height;
-	letter-spacing: @font-swatch8-letter-spacing;
-	@media @tablet {
-		font-size:bkscale(@font-swatch8-font-size, 0.6);
-		line-height:bkscale(@font-swatch8-line-height, 0.8);
-	}
-	@media @mobile {
-		font-size:bkscale(@font-swatch8-font-size, 0.5);
-		line-height:bkscale(@font-swatch8-line-height, 0.9);
-	}
-}
-
-.feature-slideshow .widget.responsiveslideshow .description{
-	color: @font-swatch9-color;
-	font-family: @font-swatch9-font-family;
-	font-size: @font-swatch9-font-size;
-	font-weight: @font-swatch9-font-weight;
-	line-height: @font-swatch9-line-height;
-	letter-spacing: @font-swatch9-letter-spacing;
-	@media @tablet {
-		font-size:bkscale(@font-swatch9-font-size, 0.6);
-		line-height:bkscale(@font-swatch9-line-height, 0.6);
-	}
-	@media @mobile {
-		font-size:bkscale(@font-swatch9-font-size, 0.5);
-		line-height:bkscale(@font-swatch9-line-height, 0.6);
-	}
-}
-
-.feature-slideshow .widget.responsiveslideshow .content-wrapper {
-	position: relative;
-	text-align: center;
-	padding:0px 120px;
-	@media @mobile {
-		padding:0px 40px;
-	}
-}
-
-.feature-slideshow .widget.responsiveslideshow span.inner {
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -moz-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-align: center;
-	-webkit-align-items: center;
-	-moz-box-align: center;
-	-ms-flex-align: center;
-	align-items: center;
-	-webkit-box-pack: center;
-	-webkit-justify-content: center;
-	-moz-box-pack: center;
-	-ms-flex-pack: center;
-	justify-content: center;
-}
-
-// Responsive
-.feature-slideshow .widget.responsiveslideshow .slideshow-image-list,
-.feature-slideshow .widget.responsiveslideshow .slideshow-widget {
-	@media @mobile {
-		// height: 230px;
-		// min-height: 250px;
-	}
-}
-
-.feature-slideshow .widget.responsiveslideshow .slideshow-widget {
-	@media @tablet {
-		height:auto;
-	}
-}
-
-.feature-slideshow .widget.responsiveslideshow .slideshow-image-list {
-	@media @mobile{
-		min-height: 400px;
-	}
-}
-
-.feature-slideshow .widget.responsiveslideshow li.slideshow-image-item, 
-.feature-slideshow .widget.responsiveslideshow span.inner, 
-.feature-slideshow .widget.responsiveslideshow .image-wrapper, 
-.feature-slideshow .widget.responsiveslideshow .slideshow-image-item {
-	background-color:fade(@color-swatch3,90%);
-
-}
-
-.widget.responsiveslideshow .slideshow-image-list.crop span.inner {
-	background-size:cover;
 }
 
 // -----------------------------
@@ -532,6 +430,8 @@ body.edit .slideshow-empty {
 }
 
 .widget.responsiveslideshow .title {
+	padding:10px 10px 0px 10px;
+	width:100%;
 	@media @tablet {
 		font-size:bkscale(@font-swatch8-font-size, 0.6);
 	}
@@ -541,7 +441,9 @@ body.edit .slideshow-empty {
 	}
 }
 
-.widget.responsiveslideshow .description{
+.widget.responsiveslideshow .description { 
+	padding:0px 10px 10px 10px;
+	width:100%;
 	@media @tablet {
 		font-size:bkscale(@font-swatch9-font-size, 0.6);
 		line-height:bkscale(@font-swatch9-line-height, 0.8);
@@ -639,6 +541,12 @@ body.edit .slideshow-empty {
 	}
 }
 
+.menu .menu-items li {
+	background-color:@color-swatch7;
+	padding:20px;
+	margin:20px;
+}
+
 // Main Menu
 .widget.menu {
 	.main.wrapper {
@@ -646,6 +554,7 @@ body.edit .slideshow-empty {
 		margin: 0 0 2em;
 		border-bottom: 1px solid darken(@color-swatch1,15%);
 		padding-bottom: 30px;
+		background-color:@color-swatch7;
 	}
 	.menu-name,
 	.menu-description,
@@ -668,6 +577,11 @@ body.edit .slideshow-empty {
 
 .menu-header {
 	margin-bottom:20px;
+	background-color: lighten(@color-swatch4,20%);
+	padding: 10px 0px;
+	h1,p {
+		color:@font-swatch7-color;
+	}
 }
 
 // Promoted Item
@@ -675,7 +589,34 @@ body.edit .slideshow-empty {
 .menu .menu-items li.menu-item-promoted,
 .menu-subsection-promoted {
 	padding: 2em;
-	background-color:@color-swatch7;
+	background-color:@color-swatch1;
+}
+
+.menu-item-promoted {
+  background-color:@color-swatch1;
+}
+
+.menu-subsection-wrapper.menu-subsection-promoted {
+  background-color:@color-swatch1;
+  padding:20px;
+  margin:20px;
+}
+
+.menu-subsection-promoted .menu-items li {
+	margin:0;
+}
+
+.menu-subsection-header {
+	margin-bottom:20px;
+	background-color: lighten(@color-swatch4,20%);
+	padding: 10px 0px;
+	h2,p {
+		color:@font-swatch7-color;
+	}
+}
+
+.menu-subsection .menu-items li {
+	margin:0;
 }
 
 // Nutritional Info
@@ -710,16 +651,6 @@ body.edit .slideshow-empty {
 	font-weight: @font-swatch7-font-weight;
 	line-height: @font-swatch7-line-height;
 	letter-spacing: @font-swatch7-letter-spacing;
-}
-
-.menu-item-promoted {
-  background-color: darken(@color-swatch1,6%);
-  padding:20px!important;
-}
-
-.menu-subsection-wrapper.menu-subsection-promoted {
-  background-color: darken(@color-swatch1,6%);
-  padding:40px;
 }
 
 // -----------------------------
