@@ -178,7 +178,7 @@ header.bk-header {
         display:none;
         width:100%;
         position: relative;
-        bottom: -80px;
+        top: 80px;
         @media @tablet {
             padding:0;
         }
@@ -208,6 +208,9 @@ header.bk-header {
     background-color:darken(@color-swatch4,5%);
     padding:0px 20px;
     top:44px;
+    @media @tablet {
+        margin:0;
+    }
 }
 
 .widget .extendednavigation ul li.folder:after {
