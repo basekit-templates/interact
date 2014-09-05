@@ -28,7 +28,6 @@
     overflow: hidden;
     position: relative;
     width: 100%;
-    margin-left: -10px;
 }
 .owl-carousel .owl-wrapper-outer.autoHeight{
     -webkit-transition: height 500ms ease-in-out;
@@ -59,8 +58,10 @@
 }
 
 .owl-buttons {
-    position:relative;
-    top:180px;
+    display: block;
+    position: absolute;
+    top: 45%;
+    width: 100%;
 }
 
 .owl-controls {
@@ -91,60 +92,44 @@
 // Button Styles
 .owl-theme .owl-controls .owl-buttons div {
     color: transparent;
-    font-size: 10px;
-    color: #fff;
-}
-
-// Controls
-.owl-theme .owl-controls {
-    position: absolute;
-    top: 40%;
-    width: 100%;
-    top: -54px;
-}
-
-// Feature Page - Buttons Styles
-.owl-carousel.features .owl-controls {
-        top: -54px;
-        .owl-prev, .owl-next {
-            padding: 1.5px 7px;
-        }
-        .owl-prev {
-            right: 44px;
-        }
+    display: inline-block;
+    zoom: 1;
+    font-size: 65px;
     @media @mobile {
-        top: -29px;
+        font-size: 45px;
     }
 }
 
+// Controls
+
 // Prev
 .owl-prev {
-    position: absolute;
-    left: -240px;
-        &:after {
-            content: "\3008";
-            color: @color-swatch3;
-            top: 40px;
-            font-size:80px;
-            left: -30px;
-            &:hover {
-                background: rgba(0,0,0,0.6);
+    float: left;
+    &:after {
+        content: "\3008";
+        color: @color-swatch3;
+        left: -50px;
+        position: absolute;
+        @media @mobile {
+            left: -25px;
+        }
+        &:hover {
+            background: rgba(0,0,0,0.6);
         }
     }
 }
 
 // Next
 .owl-next {
-    position: absolute;
-    right: -155px;
-        &:after {
-            content: "\3009";
-            color: @color-swatch3;
-            top: 40px;
-            font-size:80px;
-            left:40px;
-            width:0;
-            right: 0;
+    float: right;
+    &:after {
+        content: "\3009";
+        color: @color-swatch3;
+        right: -50px;
+        position: absolute;
+        @media @mobile {
+            right: -25px;
+        }
         &:hover {
             background: rgba(0,0,0,0.6);
         }
@@ -164,89 +149,10 @@
 
 // Text Slideshow Responsive Media Queries
 
-@media (max-width:1524px) {
-    .owl-next {
-        right: -45px;
-    }
-    .owl-prev {
-        left: -40px;
-    }
-    .carousel-text {
-        width: 750px;
-        margin: 0px auto;
-        margin-left: 150px;
-    }
-}
 
-@media (max-width: 1024px) {
-    .carousel-text {
-        width: 700px;
-        margin-left: 120px;
-    }
-}
-
-@media (max-width: 978px) {
-    .carousel-text {
-        width: 630px;
-        margin-left: 120px;
-    }
-}
-
-@media (max-width: 918px) {
-    .carousel-text {
-        width: 600px;
-        margin-left: 120px;
-    }
-}
-
-@media @tablet {
-    .carousel-text {
-        margin-left: 50px!important;
-    }
-    .owl-next {
-        right: -38px;
-    }
-}
 
 @media @mobile {
     .owl-carousel.owl-theme.page-wrap {
         padding:0;
-    }
-    .owl-next {
-        right: -10px;
-        &:after {
-            font-size:30px;
-        }
-    }
-    .owl-prev {
-        left: -10px;
-        &:after {
-            font-size:30px;
-        }
-    }
-    .carousel-text {
-        width:260px!important;
-        margin-left: 80px!important;
-    }
-}
-
-@media (max-width: 478px) {
-    .carousel-text {
-        width: 300px !important;
-        margin-left: 80px !important;
-    }
-}
-
-@media (max-width: 440px) {
-    .carousel-text {
-        width: 250px !important;
-        margin-left: 80px !important;
-    }
-}
-
-@media (max-width: 400px) {
-    .carousel-text {
-        width: 230px !important;
-        margin-left: 70px !important;
     }
 }
