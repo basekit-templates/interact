@@ -1,8 +1,8 @@
 {
-	"name":"Desktop",
-	"thumbnail":"desktop.png",
-	"screenshot":"desktop.png",
-    "tags": { "en": ["minimal", "clean", "slideshow", "red", "portfolio", "box-shadow", "bright", "art", "design"] },
+	"name":"Interact",
+	"thumbnail":"interact.png",
+	"screenshot":"interact.png",
+    "tags": { "en": ["minimal", "clean", "gallery", "blue", "portfolio", "technology", "bright", "images", "modern", "design"] },
     "pageTypes":["home"],
     "templateType":"standard",
     "colorSwatches":
