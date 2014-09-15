@@ -5,8 +5,10 @@
 
 <header class="bk-header">
     <div class="companyheader page-wrap clearfix">
-        {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
-        {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
+        <div class="brand">
+            {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+            {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
+        </div><!--end brand-->
     </div>
     <div class="nav-container clearfix">
         <div class="page-wrap">

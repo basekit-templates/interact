@@ -278,6 +278,9 @@ button:hover, .widget.button button:hover {
 
 .widget.twitter {
 	margin: 20px 0;
+	.bk-full-name {
+		font-size: bkscale(@font-swatch5, 1.1);
+	}
 	img {
 	}
 	p {
@@ -297,17 +300,6 @@ button:hover, .widget.button button:hover {
 	}
 	// Tweet Content
 	.twitter-content {
-		.bk-full-name,
-		a, p a, span, a {
-		}
-		.bk-full-name {
-			line-height:60px;
-		}
-		// Tweet Link
-		p a, a:hover span.bk-full-name {
-		}
-		span a {
-		}
 		// Extra Info
 		time {
 			display: none;
@@ -324,6 +316,7 @@ button:hover, .widget.button button:hover {
 }
 
 .twitter ul li a {
+	font-size: @font-swatch5-font-size;
 	font-weight:400;
 }
 
@@ -621,6 +614,9 @@ button:hover, .widget.button button:hover {
 	.menu-subsection {
 		padding: 0;
 	}
+	.menu-subsection-header {
+		margin: 10px 0 25px;
+	}
 	.menu-item-image-wrap {
 		background-image: none!important;
 		img {
@@ -732,11 +728,15 @@ button:hover, .widget.button button:hover {
 	}
 }
 
-.blog-post-title a {
+.blog-post-title, .blog-post-title a {
 	color: @color-swatch4;
 	&:hover {
 		text-decoration: underline;
 	}
+}
+
+.blog-post-title {
+	font-size: bkscale(@font-swatch1-font-size, 0.96);
 }
 
 .blog-post-summary {
@@ -791,7 +791,7 @@ button:hover, .widget.button button:hover {
 	margin-bottom: 10px;
 }
 
-.blog-post-tag a {
+.blog-post-tag a, .blog-post-category a {
 	color: @color-swatch2;
 }
 
