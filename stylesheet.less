@@ -124,7 +124,7 @@ header.bk-header {
 .widget.companyname a {
   padding: 0;
   @media @mobile {
-    line-height: bkscale(@font-swatch10-line-height, 0.9);
+    line-height: bkscale(@font-swatch10-line-height, 0.8);
   }
 }
 
@@ -349,10 +349,8 @@ footer.bk-footer .page-wrap {
     }
 }
 
-footer.bk-footer .widget.profile p, footer.bk-footer .widget.profile p
-span, footer.bk-footer .widget.profile a  {
-    text-align:left;
-    float:left;
+.bk-footer .widget.profile {
+    text-align: right;
 }
 
 footer .widget.profile .bk-profile-socialicons span a:hover {
@@ -371,10 +369,6 @@ footer .widget.profile .bk-profile-socialicons span a:hover {
     color: @font-swatch1-color;
     float:left!important;
     padding-right:5px;
-}
-
-.widget.profile .bk-profile-socialicons, .widget.profile p {
-    float:left;
 }
 
 .fb_iframe_widget_fluid span, .fb_iframe_widget iframe {

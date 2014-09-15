@@ -62,21 +62,17 @@
 </div>
 
 <footer class="bk-footer">
-        <div class="page-wrap clearfix">
-            <div class="responsivecolumns columns-two-50-50">
-                <div class="column columns-two-left">
-                  <div class="left-footer">
-                    {{widget('companyname', 'footercompanyname', {"business": "profile"})|raw}}
-                    </div>
-                </div>
-                <div class="column columns-two-right">
-                    <div class="right-footer">
-                        {{widget('profile', 'footercolumn1profilesocialicons', { 'profileType':'socialicons',   'socialicons':'profile'})|raw}}
-                    </div>
-                </div>
+    <div class="page-wrap clearfix">
+        <div class="responsivecolumns columns-two-50-50">
+            <div class="column columns-two-left">
+                {{widget('companyname', 'footercompanyname', {"business": "profile"})|raw}}
+            </div>
+            <div class="column columns-two-right">
+                    {{widget('profile', 'footercolumn1profilesocialicons', { 'profileType':'socialicons',   'socialicons':'profile'})|raw}}
             </div>
         </div>
-    </footer>
+    </div>
+</footer>
 
 {% endblock %}
 
