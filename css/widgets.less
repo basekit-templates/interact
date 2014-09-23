@@ -278,6 +278,10 @@ button:hover, .widget.button button:hover {
 
 .widget.twitter {
 	margin: 20px 0;
+	ul {
+		background-color: @color-swatch7;
+		padding: 0px 20px 1px 20px;
+	}
 	.bk-full-name {
 		font-size: bkscale(@font-swatch5-font-size, 1.1);
 	}
@@ -288,7 +292,12 @@ button:hover, .widget.button button:hover {
 		padding: 0;
 	}	
 	li {
-		border-bottom: darken(@color-swatch1,10%);
+		border-bottom: 1px solid white;
+		padding: 20px 0px;
+		margin: 20px 0px;
+		&:last-child {
+			border-bottom:0;
+		}
 	}
 	ul li a:hover {
 		text-decoration: none;
@@ -506,6 +515,9 @@ button:hover, .widget.button button:hover {
                 font-weight: 600;
                 line-height: 26px;
    				color: #fff;
+   				@media @mobile {
+   					display:none;
+   				}
             }
             .description {
                 font-size: 16px;
@@ -518,6 +530,9 @@ button:hover, .widget.button button:hover {
    				-o-transition: all 0.2s linear;
    				-ms-transition: all 0.2s linear;
    				transition: all 0.2s linear;
+   				@media @mobile {
+   					display:none;
+   				}
    					&:hover {
    						-ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
    						filter: alpha(opacity=100);
@@ -543,6 +558,9 @@ button:hover, .widget.button button:hover {
    		-ms-transition: all 0.3s ease-in-out;
    		transition: all 0.3s ease-in-out;
    		display: block;
+   			@media @mobile {
+   				display:none;
+   			}
     }
 
     .inner:hover {
@@ -558,6 +576,9 @@ button:hover, .widget.button button:hover {
    			-o-transform: translateX(0px);
    			-ms-transform: translateX(0px);
    			transform: translateX(0px);
+   			@media @mobile {
+   				display:none;
+   			}
     	}
     }
 }
