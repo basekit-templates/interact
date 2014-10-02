@@ -16,7 +16,7 @@
 	        .ecom-featuredproducts-title, .ecom-featuredproducts-price {
 	            color: @font-swatch1-color;
 	            &:hover {
-					text-decoration: none;
+					text-decoration: underline;
 					color:@font-swatch1-color;
 	            }
 	        }
@@ -55,7 +55,7 @@
 .checkout-pricepu,
 .checkout-amount {
 	font-family: @font-swatch2-font-family;
-	color: @color-swatch2;
+	color: @font-swatch1-color;
 }
 
 .checkout-total-amount {
@@ -344,13 +344,10 @@
 	.btn.ecom-product-add-to-cart-btn {
 		background-image: image('/images/ic-basket.png');
 		background-repeat: no-repeat;
-	    background-position: 10px center;
+	    background-position: 10px center!important;
 	    background-size: 21px;
 	    font-size: 13px;
 	    padding: 10px 15px 10px 20px;
-	    @media @tablet {
-	    	background-position: 10px center!important;
-	    }
 	    &:hover {
 	    }
 		.text:before {
