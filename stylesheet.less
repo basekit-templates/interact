@@ -5,7 +5,9 @@
 @import "@{templateCommon}/basekit-bootstrap.less";
 @import "@{templateLocal}/css/widgets.less";
 @import "@{templateLocal}/css/ecommerce.less";
-@import "@{templateLocal}/css/owl.less";
+
+
+
 
 // -----------------------------
 // Page Settings
@@ -59,6 +61,9 @@ h2 {
         line-height: (@font-swatch9-line-height * 1.3); 
     }
 }
+
+
+
 
 /*  ===============================
     Header
@@ -157,15 +162,8 @@ header.bk-header {
     }
 }
 
-/*  ===============================
-    OWL Carousel
-    =============================== */
 
-#owl-demo .item img{
-    display: block;
-    width: 100%;
-    height: auto;
-}
+
 
 /*  ===============================
     GALLERY TRANSITION
@@ -207,6 +205,9 @@ header.bk-header {
     opacity: 1;
     transition-delay: 0.4s;
 }
+
+
+
 
 /*  ===============================
     Extended Navigation
@@ -264,7 +265,7 @@ header.bk-header {
 .widget .extendednavigation ul li:hover ul {
     background-color:darken(@color-swatch4,5%);
     padding:0px 20px;
-    top:44px;
+    top:35px;
     @media @tablet {
         margin:0;
     }
@@ -274,19 +275,18 @@ header.bk-header {
   border-top-color:@font-swatch6-color;
 }
 
-.widget .extendednavigation > ul > li > a, .widget .extendednavigation ul li.folder > .text {
+.widget .extendednavigation > ul > li > a, 
+.widget .extendednavigation ul li.folder > .text {
     padding:10px 20px;
 }
 
 .widget .extendednavigation ul li.folder:after {
+    border-top-color: @color-swatch1;
     top:48%;
 }
 
-.widget .extendednavigation ul li.folder:after {
-    border-top-color: @color-swatch1;
-}
-
-.widget .extendednavigation ul li a:hover, .widget .extendednavigation ul li.folder .text:hover {
+.widget .extendednavigation ul li a:hover, 
+.widget .extendednavigation ul li.folder .text:hover {
     color:darken(@font-swatch6-color,10%);
 }
 
@@ -321,6 +321,9 @@ header.bk-header {
     }
 }
 
+
+
+
 // -----------------------------
 // Feature
 // -----------------------------
@@ -328,6 +331,9 @@ header.bk-header {
 .widget.feature {
 	margin-bottom:20px;
 }
+
+
+
 
 // -----------------------------
 // Footer
