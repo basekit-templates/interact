@@ -834,14 +834,20 @@ button:hover, .widget.button button:hover {
 	color: @color-swatch2;
 }
 
-.blog-post-tag a:after {
-	content: ',';
+.blog-post-tag {
+	&:after {
+		content: ',';
+	}
+	&:last-child:after {
+		display: none;
+	}
 }
 
 // Sharing Buttons
 .blog-post-sharing button {
 	box-shadow: none;
 	font-size: 14px;
+	margin-bottom: 5px;
 }
 
 // Blog Search
