@@ -203,6 +203,10 @@ button.btn,
 	line-height: @font-swatch7-line-height;
 	letter-spacing: @font-swatch7-letter-spacing;
 	background-position: top 14px right 24px;
+	margin-left: 4px;
+	@media only screen and (max-width: 700px) {
+		margin-left: 0;
+	}
 }
 
 .widget.clicktocall a {
@@ -871,7 +875,7 @@ button:hover, .widget.button button:hover {
     	-webkit-appearance: none;
         -moz-appearance: none;
         -webkit-border-radius: 0;
-        @media @mobile {
+        @media @media only screen and (max-width: 700px) { {
             width: 100%;
             max-width: 100%;
             margin-bottom: 12px;

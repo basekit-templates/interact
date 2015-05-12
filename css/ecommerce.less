@@ -90,7 +90,7 @@
 .delivery {
 	select {
 		height: 35px;
-		margin-bottom: 12px;
+		margin-bottom: 0;
 	    padding: 8px 33px 8px 8px;
 		-webkit-border-radius: 0;
 		-moz-border-radius: 0;
@@ -130,6 +130,7 @@
 .productlist-filter {
     .form-group {
         display: inline-block;
+        vertical-align: top;
         @media @mobile {
             width: 100%;
             margin-bottom: 0;
@@ -842,13 +843,14 @@
     }
 }
 
-.btn.ecom-product-go-to-checkout-btn {
+.widget.ecomproduct .ecom-product .btn.ecom-product-go-to-checkout-btn {
   background-color:@font-swatch7-background-color;
   font-family: @font-swatch7-font-family;
   font-size: @font-swatch7-font-size;  
   font-weight: @font-swatch7-font-weight;
   line-height: @font-swatch7-line-height; 
   letter-spacing: @font-swatch7-letter-spacing;
+  margin-bottom: 25px;
   padding: 12px 60px 12px 20px;
   &:hover {
     background-color:@font-swatch7-background-color-hover;
@@ -857,7 +859,8 @@
 }
 
 .widget.ecomproduct .ecom-product .btn {
-	margin-bottom:25px;
+	display: inline-block;
+ 	margin: 25px 0 0;
 }
 
 .form-group.productlist-search button.btn {
