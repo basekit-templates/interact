@@ -1,5 +1,6 @@
 {
 	"name":"Interact",
+	"versionTenCompatible": 1,
 	"thumbnail":"interact.png",
 	"screenshot":"interact-screenshot.jpg",
     "tags": { "en": ["minimal", "clean", "gallery", "blue", "portfolio", "technology", "bright", "images", "modern", "design"] },
