@@ -5,8 +5,10 @@
 
 <header class="bk-header">
     <div class="companyheader page-wrap clearfix">
-        {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
-        {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
+        <div class="brand">
+            {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+            {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
+        </div><!--end brand-->
     </div>
     <div class="nav-container clearfix">
         <div class="page-wrap">
@@ -15,27 +17,51 @@
     </div>
 </header>         
 
-<div class="page-wrap page-wrap-migrated">
+<section class="carousel-text page-wrap">
+    <span>{{widget('content', 'textwidgetbox1', {content: '<h3 style="text-align:left">Lorem Ipsum: Dolor Sit Amet</h3>', lines: 'all'})|raw}}</span>
+    <span>{{widget('content', 'textwidgetbox2', {content: '<h4 style="text-align:left">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</h4>', lines: 'all'})|raw}}</span>
+</section>
+
+<section class="bk-section  bk-section--gallery">
+    {{widget('gallery', 'gallery-home', 
+    {'albumRef':0,
+    'showDescription': true,
+    'showTitle': true,
+    'images':
+    [
+    {'imageHeight':'246', 'imageWidth':'246', 'url':asset('images/gallery/1.jpg'), 'title':'Image 1',  'description': 'This is image 1'},
+    {'imageHeight':'246', 'imageWidth':'246', 'url':asset('images/gallery/2.jpg'), 'title':'Image 2',  'description': 'This is image 2'},
+    {'imageHeight':'246', 'imageWidth':'246', 'url':asset('images/gallery/3.jpg'), 'title':'Image 3',  'description': 'This is image 3'},
+    {'imageHeight':'246', 'imageWidth':'246', 'url':asset('images/gallery/4.jpg'), 'title':'Image 4',  'description': 'This is image 4'},
+    {'imageHeight':'246', 'imageWidth':'246', 'url':asset('images/gallery/5.jpg'), 'title':'Image 5',  'description': 'This is image 5'},
+    {'imageHeight':'246', 'imageWidth':'246', 'url':asset('images/gallery/6.jpg'), 'title':'Image 6',  'description': 'This is image 6'},  
+    ]
+    })|raw}}
+</section>
+
+<div class="page-wrap">
     <div class="mainzone headerwrapper">
         {{zone('main')|raw}}
     </div>
 </div>
 
 <footer class="bk-footer">
-        <div class="page-wrap clearfix">
-            <div class="responsivecolumns columns-two-50-50">
-                <div class="column columns-two-left">
-                  <div class="left-footer">
-                    {{widget('companyname', 'footercompanyname', {"business": "profile"})|raw}}
-                    </div>
-                </div>
-                <div class="column columns-two-right">
-                    <div class="right-footer">
-                        {{widget('profile', 'footercolumn1profilesocialicons', { 'profileType':'socialicons',   'socialicons':'profile'})|raw}}
-                    </div>
-                </div>
+    <div class="page-wrap clearfix">
+        <div class="responsivecolumns columns-two-50-50">
+            <div class="column columns-two-left">
+                {{widget('companyname', 'footercompanyname', {"business": "profile"})|raw}}
+            </div>
+            <div class="column columns-two-right">
+                    {{widget('profile', 'footercolumn1profilesocialicons', { 'profileType':'socialicons',   'socialicons':'profile'})|raw}}
             </div>
         </div>
-    </footer>
+    </div>
+</footer>
 
 {% endblock %}
+
+{% block bodyscripts %}
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+{% endblock %}  
